@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget{
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color(0xFF4F6FD),
+                    color: const Color(0xFFF4F6FD),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: Row(
@@ -58,6 +58,20 @@ class HomeScreen extends StatelessWidget{
                       Text("Search",style: Styles.headLineStyle4 ,)
                     ],
                   ),
+                ),
+                const Gap(35),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween ,
+                  children: [
+                    Text("Upcoming Flights", style: Styles.headLineStyle2,),
+                    InkWell(
+                      onTap: (){
+                        print("You are tapped");
+                      },
+                        child: Text("View all", style: Styles.textStyle.copyWith(color: Styles.primaryColor),
+                        )
+                    ),
+                  ],
                 )
               ],
             ),
